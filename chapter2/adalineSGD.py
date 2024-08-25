@@ -45,8 +45,8 @@ class AdalineSGD:
     def _update_weights(self, xi, target):
         output = self.activation(self.net_input(xi))
         error = (target - output)
-        self.w_[1:] += self.eta * xi * (error)
-        self.w_[0] += self.eta * error
+        self.w_ += self.eta * 2.0 * xi * (error)
+        self.b_ += self.eta * 2.0 * error
         loss = error**2
         return loss
 
