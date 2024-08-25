@@ -1,6 +1,6 @@
 import numpy as np
 
-class Adaline:
+class AdalineGD:
     def __init__(self, eta=0.01, n_iter=50, random_state =1):
         self.eta = eta #学習率
         self.n_iter = n_iter #訓練回数
