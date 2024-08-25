@@ -33,7 +33,7 @@ class AdalineSGD:
         return self
     
     def _shuffle(self, X, y):
-        r = np.rgen.permutation(len(y))
+        r = self.rgen.permutation(len(y))
         return X[r], y[r]
     
     def _initialize_weights(self, m):
